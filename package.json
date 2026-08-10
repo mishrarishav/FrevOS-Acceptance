@@ -1,0 +1,32 @@
+{
+  "name": "frevos-acceptance",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.21.0",
+  "engines": {
+    "node": ">=24.14.0 <25",
+    "pnpm": ">=11.21.0 <12"
+  },
+  "scripts": {
+    "audit": "pnpm audit --audit-level=high",
+    "check": "biome check .",
+    "ci": "pnpm run validate:repo && pnpm run format:check && pnpm run lint && pnpm run typecheck && pnpm run test && pnpm run audit",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "lint": "biome lint .",
+    "show-report": "playwright show-report",
+    "test": "playwright test",
+    "test:desktop": "playwright test --project=desktop-chromium",
+    "test:mobile": "playwright test --project=mobile-chromium",
+    "typecheck": "tsc -p tsconfig.json",
+    "validate:repo": "node scripts/validate-repository.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.12.1",
+    "@biomejs/biome": "2.5.7",
+    "@playwright/test": "1.62.1",
+    "@types/node": "24.13.3",
+    "typescript": "7.0.2"
+  }
+}
