@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Acceptance Harness Fixture</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <span class="brand">Harness Fixture</span>
+      <nav aria-label="Primary navigation">
+        <a href="#status-panel">Status</a>
+        <a href="#scope">Scope</a>
+      </nav>
+    </header>
+    <main id="main-content">
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">Synthetic test target</p>
+        <h1 id="page-title">Independent acceptance harness</h1>
+        <p id="scope">
+          This deterministic page verifies browser, responsive, accessibility, and failure
+          evidence without representing the FrevOS product UI.
+        </p>
+        <p class="viewport desktop" data-testid="desktop-indicator">Desktop viewport active</p>
+        <p class="viewport mobile" data-testid="mobile-indicator">Mobile viewport active</p>
+      </section>
+      <section id="status-panel" class="status-card" aria-labelledby="status-title">
+        <h2 id="status-title">Fixture service status</h2>
+        <button type="button" data-testid="load-status">Load status</button>
+        <p role="status" aria-live="polite" data-testid="service-status">Not checked</p>
+      </section>
+    </main>
+    <footer>Phase 2 harness fixture — not product acceptance evidence.</footer>
+  </body>
+</html>
