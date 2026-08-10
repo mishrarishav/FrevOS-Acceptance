@@ -5,9 +5,10 @@ Independent black-box acceptance and evidence harness for
 
 ## Current status
 
-This repository is in **Phase 2: independent acceptance harness**. It validates
-the Playwright runner itself against a synthetic fixture on desktop and mobile
-Chromium. It does not claim that FrevOS product behavior exists or passes.
+The **Phase 2 independent acceptance foundation is complete**. The merged
+Playwright harness validates itself against a synthetic fixture on desktop and
+mobile Chromium. It does not claim that FrevOS product behavior exists or
+passes.
 
 Product-facing specifications begin only after the Phase 3 UI reference and
 screen contract are approved. Later specifications may exercise FrevOS only
